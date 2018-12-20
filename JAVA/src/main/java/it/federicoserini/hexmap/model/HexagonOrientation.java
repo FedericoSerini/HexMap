@@ -1,4 +1,4 @@
-package it.federicoserini.hexmap;
+package it.federicoserini.hexmap.model;
 
 public class HexagonOrientation {
     private double forwardMatrix0, forwardMatrix1, forwardMatrix2, forwardMatrix3;

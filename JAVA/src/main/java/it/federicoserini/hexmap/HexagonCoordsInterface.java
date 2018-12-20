@@ -1,5 +1,7 @@
 package it.federicoserini.hexmap;
 
+import it.federicoserini.hexmap.model.Hexagon;
+
 public interface HexagonCoordsInterface {
     Hexagon addHexagon(Hexagon firstHexagon, Hexagon secondHexagon);
     Hexagon subHexagon(Hexagon firstHexagon, Hexagon secondHexagon);

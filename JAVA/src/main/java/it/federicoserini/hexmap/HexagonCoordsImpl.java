@@ -1,6 +1,8 @@
 package it.federicoserini.hexmap;
 
-public class HexagonCoords implements HexagonCoordsInterface {
+import it.federicoserini.hexmap.model.Hexagon;
+
+public class HexagonCoordsImpl implements HexagonCoordsInterface {
 
     @Override
     public Hexagon addHexagon(Hexagon firstHexagon, Hexagon secondHexagon) {

@@ -1,8 +1,10 @@
 package it.federicoserini.hexmap;
 
+import it.federicoserini.hexmap.model.Hexagon;
+
 import java.util.Vector;
 
-public class HexagonDistance implements HexagonDistanceInterface{
+public class HexagonDistanceImpl implements HexagonDistanceInterface{
 
     public static Vector getAllHexagonDirections(){
         Vector<Hexagon> hexagonVector = new Vector<>();
@@ -16,15 +18,15 @@ public class HexagonDistance implements HexagonDistanceInterface{
     }
 
     @Override
-    public int hexagonLength(Hexagon hexagon) {
-        int length = Math.abs(hexagon.getX()) +
+    public double hexagonLength(Hexagon hexagon) {
+        double length = Math.abs(hexagon.getX()) +
                 Math.abs(hexagon.getY()) +
                 Math.abs(hexagon.getZ());
         return length/2;
     }
 
     @Override
-    public int hexagonDistance(Hexagon firstHexagon, Hexagon secondHexagon) {
+    public double hexagonDistance(Hexagon firstHexagon, Hexagon secondHexagon) {
         return hexagonLength(
             new Hexagon(
                     firstHexagon.getX() - secondHexagon.getX(),

@@ -1,32 +1,32 @@
-package it.federicoserini.hexmap;
+package it.federicoserini.hexmap.model;
 
 public class Hexagon {
-    private int x,y,z;
+    private double x,y,z;
 
-    public Hexagon(int x, int y, int z){
+    public Hexagon(double x, double y, double z){
         this.x = x;
         this.y = y;
         this.z = z;
-        assert x + y + z == 0 || (x + y + z != 0);
+        assert Math.round(x + y + z) == 0 || (Math.round(x + y + z) != 0);
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
-    public int getZ() {
+    public double getZ() {
         return z;
     }
 

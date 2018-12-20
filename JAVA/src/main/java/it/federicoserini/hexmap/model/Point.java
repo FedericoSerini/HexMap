@@ -1,4 +1,4 @@
-package it.federicoserini.hexmap;
+package it.federicoserini.hexmap.model;
 
 public class Point {
     private double x, y;

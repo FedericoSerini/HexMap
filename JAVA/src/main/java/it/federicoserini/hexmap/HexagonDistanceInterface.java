@@ -1,10 +1,10 @@
 package it.federicoserini.hexmap;
 
-import java.util.Vector;
+import it.federicoserini.hexmap.model.Hexagon;
 
 public interface HexagonDistanceInterface {
-    int hexagonLength(Hexagon hexagon);
-    int hexagonDistance(Hexagon firstHexagon, Hexagon secondHexagon);
+    double hexagonLength(Hexagon hexagon);
+    double hexagonDistance(Hexagon firstHexagon, Hexagon secondHexagon);
     Hexagon hexagonDirection(int direction);
     Hexagon hexagonNeighbor(Hexagon hexagon, int direction);
 }
