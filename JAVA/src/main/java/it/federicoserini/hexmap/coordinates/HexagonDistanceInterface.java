@@ -1,4 +1,4 @@
-package it.federicoserini.hexmap;
+package it.federicoserini.hexmap.coordinates;
 
 import it.federicoserini.hexmap.model.Hexagon;
 

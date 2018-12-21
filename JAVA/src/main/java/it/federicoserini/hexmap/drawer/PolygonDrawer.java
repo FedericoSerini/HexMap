@@ -2,10 +2,11 @@ package it.federicoserini.hexmap.drawer;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class PolygonDrawer {
 
-    private void initDrawer(Polygon polygonToDraw){
+    private void initDrawer(ArrayList<Polygon> polygonsToDraw){
         JFrame mainMap = new JFrame();
         mainMap.setResizable(false);
 
@@ -16,7 +17,10 @@ public class PolygonDrawer {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 g.setColor(Color.BLUE);
-                g.drawPolygon(polygonToDraw);
+
+                for (Polygon polygon : polygonsToDraw) {
+                    g.drawPolygon(polygon);
+                }
             }
 
             @Override
@@ -31,8 +35,8 @@ public class PolygonDrawer {
 
     }
 
-    public PolygonDrawer(Polygon polygonToDraw){
-        initDrawer(polygonToDraw);
+    public PolygonDrawer(ArrayList<Polygon> polygonsToDraw){
+        initDrawer(polygonsToDraw);
     }
 
 }
